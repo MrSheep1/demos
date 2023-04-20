@@ -34,10 +34,13 @@
 }
 
 - (void)unlockApp {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.unlockWindow resignKeyWindow];
+    self.unlockWindow.windowLevel = -100;
+    [self.unlockWindow.rootViewController dismissViewControllerAnimated:YES completion:nil];
     self.unlockWindow = nil;
-    [self.window makeKeyAndVisible];
     
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
     self.window.rootViewController = [[ViewController alloc] init];
 }
 
