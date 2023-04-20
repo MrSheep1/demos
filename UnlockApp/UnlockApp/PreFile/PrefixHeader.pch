@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  UnlockApp
+//
+//  Created by yangtao on 2023/4/20.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <objc/runtime.h>
+#import <UIKit/UIKit.h>
+
+// defines
+#import "MSUniversalHead.h"
+
+
+// third party
+#import <Masonry.h>
+
+#endif
+
+#endif /* PrefixHeader_pch */

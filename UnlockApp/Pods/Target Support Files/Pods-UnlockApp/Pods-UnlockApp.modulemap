@@ -1,0 +1,6 @@
+framework module Pods_UnlockApp {
+  umbrella header "Pods-UnlockApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
